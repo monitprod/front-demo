@@ -23,7 +23,7 @@ export default function Card({product}: CardProps) {
                     animationDuration={3000} />
             </div>
             <div className={s["Text-wrapper"]}>
-                <H2>{limitText(title, 20, "...")}</H2>
+                <H2 className={s["H2"]}>{limitText(title, 20, "...")}</H2>
                 <Sub className={s["Sub"]}>{limitText(specification, 45, "...")}</Sub>
                 <Price>R$ {formatPrice(price.value)}</Price>
             </div>

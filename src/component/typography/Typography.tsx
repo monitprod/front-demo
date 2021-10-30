@@ -8,9 +8,7 @@ export function H1(props: TypographyProps) {
     return <Typography {...props} variant="h1"  />
 }
 
-
 export function H2(props: TypographyProps) {
-
     return <Typography {...props} variant="h2" />
 }
 

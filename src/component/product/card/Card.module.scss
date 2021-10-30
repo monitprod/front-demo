@@ -1,5 +1,4 @@
 .Card {
-    max-height: 25rem;
     overflow: hidden;
     // border: 1px solid red;
     border-radius: 32px;
@@ -23,5 +22,11 @@
 }
 
 .Sub {
-    height: 55px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.H2 {
+    height: 30px;
+    overflow: hidden;
 }
