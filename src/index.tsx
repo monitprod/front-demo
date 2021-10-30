@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'index.scss';
+import HomePage from 'page/Home';
+import reportWebVitals from 'reportWebVitals';
+import MainLayout from 'layout/main/Main';
+import Header from 'container/header/Header';
+import { ThemeProvider } from '@material-ui/core';
+import { theme } from 'config/theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <MainLayout 
+        header={<Header />}
+        body={<HomePage/>}
+      />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
