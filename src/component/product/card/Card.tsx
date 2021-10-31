@@ -1,6 +1,6 @@
 import s from './Card.module.scss'
 
-import Image from 'material-ui-image'
+import Image from '@jy95/material-ui-image'
 import { Product } from "model/product";
 import { H2, Sub, Price } from 'component/typography/Typography';
 

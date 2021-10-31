@@ -5,17 +5,20 @@ import HomePage from 'page/Home';
 import reportWebVitals from 'reportWebVitals';
 import MainLayout from 'layout/main/Main';
 import Header from 'container/header/Header';
-import { ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@mui/material';
 import { theme } from 'config/theme';
+import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <MainLayout 
-        header={<Header />}
-        body={<HomePage/>}
-      />
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <MainLayout 
+          header={<Header />}
+          body={<HomePage/>}
+        />
+      </ThemeProvider>
+    </StyledEngineProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

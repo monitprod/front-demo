@@ -1,6 +1,11 @@
-import { createTheme } from "@material-ui/core/styles";
+import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#ED2E7E",
+    }
+  },
   typography: {
     price: {
       fontWeight: "bold",
@@ -33,6 +38,14 @@ export const theme = createTheme({
       color: "#66738F",
       lineHeight: "25px"
     },
+    body1: {
+      fontWeight: "normal",
+      fontStyle: "normal",
+      fontSize: "24px",
+      letterSpacing: "0.75px",
+      color: "#14142B",
+      lineHeight: "38px"
+    },
     fontFamily: ["Poppins"].join(","),
   },
   components: {
@@ -47,10 +60,15 @@ export const theme = createTheme({
       },
       variants: [],
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: "15px",
+        },      
+      }
+    },
     MuiButtonBase: {
       defaultProps: {
-        // The props to change the default for.
-        disableRipple: true, // No more ripple!
       },
     },
     MuiToolbar: {
@@ -63,7 +81,7 @@ export const theme = createTheme({
   },
 });
 
-declare module '@material-ui/core/styles' {
+declare module '@mui/material/styles' {
   interface TypographyVariants {
     price: React.CSSProperties;
   }
@@ -75,7 +93,7 @@ declare module '@material-ui/core/styles' {
 }
 
 // Update the Typography's variant prop options
-declare module '@material-ui/core/Typography' {
+declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     price: true;
   }

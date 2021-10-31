@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core"
+import Typography from "@mui/material/Typography"
 
 interface TypographyProps extends React.ComponentProps<typeof Typography> {
 
@@ -18,4 +18,8 @@ export function Sub(props: TypographyProps) {
 
 export function Price(props: TypographyProps) {
     return <Typography {...props} variant="price" />
+}
+
+export function Text(props: TypographyProps) {
+    return <Typography {...props} variant="body1" />
 }
