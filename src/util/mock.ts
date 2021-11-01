@@ -1,6 +1,6 @@
 import { sleep } from "util/sleep";
 
-const API_MOCK_ENABLED = !!process.env.REACT_APP_API_MOCK_ENABLED;
+const API_MOCK_ENABLED = process.env.REACT_APP_API_MOCK_ENABLED === "true";
 const API_MOCK_DELAY = Number(process.env.REACT_APP_API_MOCK_DELAY);
 
 // Use this to return mock with env options
